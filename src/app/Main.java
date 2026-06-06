@@ -1,15 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+package app;
+
+
+import model.Direccion;
+import model.Guia;
+import model.Persona;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Direccion dir1 = new Direccion("C. Manuel Antonio Matta", "Llanquihue", "Los Lagos");
+        Direccion dir2 = new Direccion("C. Volcán Casablanca", "Puerto Montt", "Los Lagos");
+        Direccion dir3 = new Direccion("C. Los Perales", "Frutillar", "Los Lagos");
+
+        Persona persona1 = new Persona("Juanito", "García", "23.157.214-K", dir1);
+        Persona persona2 = new Persona("Anita", "Muñoz", "25.842.475-5", dir2);
+
+        Guia guia1 = new Guia("Carla", "Pérez", "11-446.936-7", dir3,
+                "Rutas gastronómicas", "Español", 18);
+
+        System.out.println("----- PERSONA 1 -----");
+        System.out.println(persona1);
+
+        System.out.println("\n----- PERSONA 2 -----");
+        System.out.println(persona2);
+
+        System.out.println("\n----- GUÍA -----");
+        System.out.println(guia1);
     }
 }

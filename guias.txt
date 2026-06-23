@@ -1,0 +1,3 @@
+Carla;Pérez;11-446.936-7;C. Los Perales;Frutillar;Los Lagos;Rutas gastronómicas;Español;18
+Pedro;Soto;14.252.734-5;C. Estación;Puerto Varas;Los Lagos;Paseos naturales;Inglés;6
+Marta;Gómez;24.632.637-K;C. Río Llico;Llanquihue;Los Lagos;Excursiones culturales;Alemán;24

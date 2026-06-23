@@ -1,4 +1,4 @@
-Sistema de Llanquihue Tour - Actividad Sumativa 1 - Semana 3
+Sistema de Llanquihue Tour - Actividad Sumativa 2 - Semana 5
 
 Autor del Proyecto:
 
@@ -29,9 +29,13 @@ Estructura general del Proyecto:
 - |    └── Direccion
 - |    └── Guia
 - |    └── Persona
+- ├── service/
+- |    └── GuiaService
+- ├── util/
+- |    └── LectorArchivo
 - └── .gitignore
 
 ---------------------------
 
 - Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa1_Semana3
-- Fecha de entrega: 08/06/2026
+- Fecha de entrega: 22/06/2026

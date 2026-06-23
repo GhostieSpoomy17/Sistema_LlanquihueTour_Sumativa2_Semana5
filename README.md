@@ -37,5 +37,5 @@ Estructura general del Proyecto:
 
 ---------------------------
 
-- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa1_Semana3
+- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa2_Semana5
 - Fecha de entrega: 22/06/2026

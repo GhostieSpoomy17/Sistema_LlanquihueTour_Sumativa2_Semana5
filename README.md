@@ -1,4 +1,4 @@
-Sistema de Llanquihue Tour - Actividad Sumativa 2 - Semana 5
+Sistema de Llanquihue Tour - Actividad Sumativa 3 - Semana 8
 
 Autor del Proyecto:
 
@@ -24,18 +24,25 @@ Estructura general del Proyecto:
 
 - 📁 src/
 - ├── app/
-- |    └── Main
+- |    └── Main -> Clase que ejecutará todo el código
 - ├── model/
-- |    └── Direccion
-- |    └── Guia
-- |    └── Persona
+- |    └── Direccion -> Clase de composición usada por Persona
+- |    └── Guia -> Clase que hereda Persona e implementa Registrable
+- |    └── Persona -> Clase que continuene atributos comunes de una persona
+- |    └── Registrable -> Interfaz común
+- |    └── ColaboradorExterno -> Clase que hereda Persona e implementa Registrable
+- |    └── Vehiculo -> Clase con atributos de vehículos que implementa Registrable
+- ├── data/
+- |    └── GestorEntidades -> Colección ArrayList para guardar la información agregada
 - ├── service/
-- |    └── GuiaService
+- |    └── GuiaService -> Búsqueda y filtro de guías
 - ├── util/
-- |    └── LectorArchivo
+- |    └── LectorArchivo -> Lee los datos de guias.txt y los pone en una colección
+- ├── ui/
+- |    └── MenuGUI -> Interfaz gráfica para registrar y ver la información de entidades
 - └── .gitignore
 
 ---------------------------
 
-- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa2_Semana5
-- Fecha de entrega: 22/06/2026
+- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa3_Semana8
+- Fecha de entrega: 13/07/2026

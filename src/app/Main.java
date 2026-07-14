@@ -1,9 +1,11 @@
 package app;
 
+import data.GestorEntidades;
 import model.Direccion;
 import model.Guia;
 import model.Persona;
 import service.GuiaService;
+import ui.MenuGUI;
 import util.LectorArchivo;
 
 import java.util.ArrayList;
@@ -35,10 +37,9 @@ public class Main {
         System.out.println(guia1);
         // ------------------------------
 
-        // Código para Sumativa 2
+        // Código de Sumativa 2
         // ------------------------------
         System.out.println("\nSUMATIVA 2:");
-        // Carga de guías desde archivo
         System.out.println("\n===== CARGANDO GUÍAS DESDE ARCHIVO =====");
         ArrayList<Guia> listaGuias = LectorArchivo.leerGuias("guias.txt");
 
@@ -47,7 +48,6 @@ public class Main {
         System.out.println("\n----- LISTADO COMPLETO DE GUÍAS -----");
         servicio.mostrarTodos();
 
-        // Búsqueda de guías por RUT
         System.out.println("\n----- BÚSQUEDA POR RUT: 14.252.734-5 -----");
         Guia encontrado = servicio.buscarPorRut("14.252.734-5");
         if (encontrado != null) {
@@ -57,7 +57,6 @@ public class Main {
             System.out.println("No se encontró un guía con ese RUT.");
         }
 
-        // Búsqueda de guías por especialidad
         System.out.println("\n----- BÚSQUEDA POR ESPECIALIDAD: Excursiones culturales -----");
         ArrayList<Guia> porEspecialidad = servicio.buscarPorEspecialidad("Excursiones culturales");
         for (Guia g : porEspecialidad) {
@@ -65,11 +64,20 @@ public class Main {
             System.out.println("------------------------");
         }
 
-        // Búsqueda de guías experimentados (por tiempo)
         System.out.println("\n----- GUÍAS CON 12 MESES O MÁS DE EXPERIENCIA -----");
         ArrayList<Guia> experimentados = servicio.buscarExperimentados();
         for (Guia g : experimentados) {
             System.out.println(g.presentarse());
         }
+        // ------------------------------
+
+        // Código de Sumativa 3
+        // ------------------------------
+        System.out.println("\nSUMATIVA 3:");
+        System.out.println("Iniciando interfaz gráfica...");
+        GestorEntidades gestor = new GestorEntidades();
+        MenuGUI menu = new MenuGUI(gestor);
+        menu.iniciar();
+        // ------------------------------
     }
 }

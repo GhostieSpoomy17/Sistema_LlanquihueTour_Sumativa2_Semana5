@@ -15,30 +15,42 @@ public class GestorEntidades {
         entidades.add(entidad);
     }
 
-    public ArrayList<Registrable> getEntidades() {
-        return entidades;
+    public int cantidadEntidades() {
+        return entidades.size();
     }
 
-    public void mostrarTodos() {
+    public boolean estaVacio() {
+        return entidades.isEmpty();
+    }
+
+    public String construirResumenTodos() {
         if (entidades.isEmpty()) {
-            System.out.println("No hay entidades registradas.");
-            return;
+            return "No hay entidades registradas.";
         }
+        StringBuilder sb = new StringBuilder();
         for (Registrable r : entidades) {
-            r.mostrarResumen();
-            System.out.println("------------------------");
+            sb.append(r.toString()).append("\n------------------------\n");
         }
+        return sb.toString();
     }
 
-    public void mostrarPorTipo() {
+    public String construirResumenPorTipo() {
+        if (entidades.isEmpty()) {
+            return "No hay entidades registradas.";
+        }
+        StringBuilder sb = new StringBuilder();
         for (Registrable r : entidades) {
-            if (r instanceof Guia) {
-                System.out.println("[GUÍA] " + ((Guia) r).getNombre() + " " + ((Guia) r).getApellido());
-            } else if (r instanceof ColaboradorExterno) {
-                System.out.println("[COLABORADOR] " + ((ColaboradorExterno) r).getNombre() + " " + ((ColaboradorExterno) r).getApellido());
-            } else if (r instanceof Vehiculo) {
-                System.out.println("[VEHÍCULO] " + ((Vehiculo) r).getMarca() + " - " + ((Vehiculo) r).getPatente());
+            if (r instanceof Guia g) {
+                sb.append("[GUÍA] ")
+                        .append(g.getNombre()).append(" ").append(g.getApellido()).append("\n");
+            } else if (r instanceof ColaboradorExterno c) {
+                sb.append("[COLABORADOR] ")
+                        .append(c.getNombre()).append(" ").append(c.getApellido()).append("\n");
+            } else if (r instanceof Vehiculo v) {
+                sb.append("[VEHÍCULO] ")
+                        .append(v.getMarca()).append(" - ").append(v.getPatente()).append("\n");
             }
         }
+        return sb.toString();
     }
 }

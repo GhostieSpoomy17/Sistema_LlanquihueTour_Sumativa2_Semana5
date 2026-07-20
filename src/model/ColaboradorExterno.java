@@ -13,28 +13,18 @@ public class ColaboradorExterno extends Persona implements Registrable {
 
     public String getEmpresa() { return empresa; }
     public void setEmpresa(String empresa) {
-        try {
-            if (empresa == null || empresa.trim().isEmpty()) {
-                throw new IllegalArgumentException("La empresa no puede estar vacía.");
-            }
-            this.empresa = empresa;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.empresa = "Sin empresa";
+        if (empresa == null || empresa.trim().isEmpty()) {
+            throw new IllegalArgumentException("La empresa no puede estar vacía.");
         }
+        this.empresa = empresa;
     }
 
     public String getServicio() { return servicio; }
     public void setServicio(String servicio) {
-        try {
-            if (servicio == null || servicio.trim().isEmpty()) {
-                throw new IllegalArgumentException("El servicio no puede estar vacío.");
-            }
-            this.servicio = servicio;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.servicio = "Sin servicio";
+        if (servicio == null || servicio.trim().isEmpty()) {
+            throw new IllegalArgumentException("El servicio no puede estar vacío.");
         }
+        this.servicio = servicio;
     }
 
     @Override

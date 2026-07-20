@@ -13,41 +13,26 @@ public class Direccion {
 
     public String getCalle() { return calle; }
     public void setCalle(String calle) {
-        try {
-            if (calle == null || calle.trim().isEmpty()) {
-                throw new IllegalArgumentException("La calle no puede estar vacía.");
-            }
-            this.calle = calle;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.calle = "Sin calle";
+        if (calle == null || calle.trim().isEmpty()) {
+            throw new IllegalArgumentException("La calle no puede estar vacía.");
         }
+        this.calle = calle;
     }
 
     public String getCiudad() { return ciudad; }
     public void setCiudad(String ciudad) {
-        try {
-            if (ciudad == null || ciudad.trim().isEmpty()) {
-                throw new IllegalArgumentException("La ciudad no puede estar vacía.");
-            }
-            this.ciudad = ciudad;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.ciudad = "Sin ciudad";
+        if (ciudad == null || ciudad.trim().isEmpty()) {
+            throw new IllegalArgumentException("La ciudad no puede estar vacía.");
         }
+        this.ciudad = ciudad;
     }
 
     public String getRegion() { return region; }
     public void setRegion(String region) {
-        try {
-            if (region == null || region.trim().isEmpty()) {
-                throw new IllegalArgumentException("La región no puede estar vacía.");
-            }
-            this.region = region;
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            this.region = "Sin región";
+        if (region == null || region.trim().isEmpty()) {
+            throw new IllegalArgumentException("La región no puede estar vacía.");
         }
+        this.region = region;
     }
 
     @Override

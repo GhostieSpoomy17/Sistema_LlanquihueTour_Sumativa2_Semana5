@@ -1,4 +1,4 @@
-Sistema de Llanquihue Tour - Actividad Sumativa 3 - Semana 8
+Sistema de Llanquihue Tour - Evaluación Transversal - Semana 9
 
 Autor del Proyecto:
 
@@ -44,5 +44,5 @@ Estructura general del Proyecto:
 
 ---------------------------
 
-- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Sumativa3_Semana8
-- Fecha de entrega: 13/07/2026
+- Repositorio GitHub: https://github.com/GhostieSpoomy17/Sistema_LlanquihueTour_Transversal_Semana9
+- Fecha de entrega: 19/07/2026
